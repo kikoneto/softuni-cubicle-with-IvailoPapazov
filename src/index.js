@@ -13,6 +13,6 @@ app.engine('hbs', handlebars.engine({
 }));
 app.set('view engine', 'hbs');
 
-app.use(router)
+app.use(router);
 
 app.listen(port, () => console.log(`App is listening on port ${port}...`));
