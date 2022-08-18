@@ -1,9 +1,18 @@
+const router = require('express').Router();
+
 const cubes = require('../db.json');
 
-exports.index = (req, res) => {
+router.get('/', (req, res) => {
     res.render('index', { cubes });
-};
+});
 
-exports.about = (req, res) => {
+router.get('/about', (req, res) => {
     res.render('about');
-}
+});
+
+router.post('/ivan', (req, res) => {
+    res.send('Successfully sent information');
+    console.log(req.body);
+})
+
+module.exports = router;
